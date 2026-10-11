@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgriAssist - Agriculture AI Assistant</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= SIDEBAR ================= -->
+
+        <aside class="sidebar" id="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">🌱</div>
+
+                <div>
+                    <h2>AgriAssist</h2>
+                    <span>AI Agriculture Assistant</span>
+                </div>
+            </div>
+
+            <button class="new-chat-btn" id="newChatBtn">
+                <span>＋</span>
+                New Chat
+            </button>
+
+            <div class="sidebar-section">
+
+                <p class="section-title">Agriculture Topics</p>
+
+                <button class="topic-btn" data-question="What is the best fertilizer for wheat?">
+                    🌾 Crop & Farming
+                </button>
+
+                <button class="topic-btn" data-question="How can I improve soil fertility?">
+                    🌱 Soil Management
+                </button>
+
+                <button class="topic-btn" data-question="How can I control pests in tomato crops?">
+                    🐛 Pest Management
+                </button>
+
+                <button class="topic-btn" data-question="What is drip irrigation?">
+                    💧 Irrigation
+                </button>
+
+                <button class="topic-btn" data-question="What are the common diseases of rice?">
+                    🦠 Crop Diseases
+                </button>
+
+                <button class="topic-btn" data-question="How can I increase crop yield?">
+                    📈 Crop Yield
+                </button>
+
+            </div>
+
+            <div class="sidebar-bottom">
+
+                <div class="status-card">
+                    <span class="status-dot"></span>
+
+                    <div>
+                        <strong>AI Online</strong>
+                        <small>Ready to help farmers</small>
+                    </div>
+                </div>
+
+                <button class="clear-btn" id="clearBtn">
+                    🗑️ Clear Conversation
+                </button>
+
+            </div>
+
+        </aside>
+
+
+        <!-- ================= MAIN AREA ================= -->
+
+        <main class="main">
+
+            <!-- HEADER -->
+
+            <header class="header">
+
+                <button class="menu-btn" id="menuBtn">
+                    ☰
+                </button>
+
+                <div class="header-info">
+
+                    <div class="header-avatar">
+                        🌱
+                    </div>
+
+                    <div>
+                        <h1>AgriAssist</h1>
+
+                        <div class="online-status">
+                            <span></span>
+                            Agriculture AI Assistant
+                        </div>
+                    </div>
+
+                </div>
+
+                <button class="theme-btn" id="themeBtn" title="Change theme">
+                    🌙
+                </button>
+
+            </header>
+
+
+            <!-- CHAT AREA -->
+
+            <section class="chat-container" id="chatContainer">
+
+                <!-- WELCOME SCREEN -->
+
+                <div class="welcome" id="welcome">
+
+                    <div class="welcome-icon">
+                        🌱
+                    </div>
+
+                    <h2>
+                        Hello! I'm AgriAssist 👋
+                    </h2>
+
+                    <p>
+                        Your AI-powered agriculture assistant.
+                        Ask me anything related to farming, crops,
+                        soil, fertilizers, irrigation, pests and more.
+                    </p>
+
+                    <div class="suggestions">
+
+                        <button class="suggestion"
+                            data-question="Which crop is suitable for black soil?">
+                            <span>🌾</span>
+                            <div>
+                                <strong>Crop Recommendation</strong>
+                                <small>Find suitable crops</small>
+                            </div>
+                        </button>
+
+                        <button class="suggestion"
+                            data-question="How can I improve soil fertility naturally?">
+                            <span>🌱</span>
+                            <div>
+                                <strong>Soil Health</strong>
+                                <small>Improve soil fertility</small>
+                            </div>
+                        </button>
+
+                        <button class="suggestion"
+                            data-question="What are the common pests in tomato crops?">
+                            <span>🐛</span>
+                            <div>
+                                <strong>Pest Control</strong>
+                                <small>Manage crop pests</small>
+                            </div>
+                        </button>
+
+                        <button class="suggestion"
+                            data-question="What is drip irrigation and what are its benefits?">
+                            <span>💧</span>
+                            <div>
+                                <strong>Irrigation</strong>
+                                <small>Learn water management</small>
+                            </div>
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MESSAGES -->
+
+                <div class="messages" id="messages"></div>
+
+            </section>
+
+
+            <!-- INPUT AREA -->
+
+            <footer class="input-area">
+
+                <div class="input-wrapper">
+
+                    <button
+                        class="voice-btn"
+                        id="voiceBtn"
+                        title="Voice input">
+                        🎤
+                    </button>
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Ask your agriculture question..."
+                        rows="1"
+                        autocomplete="off"></textarea>
+
+                    <button
+                        class="send-btn"
+                        id="sendBtn"
+                        title="Send message">
+                        ➤
+                    </button>
+
+                </div>
+
+                <p class="input-note">
+                    🌱 AgriAssist answers agriculture-related questions only.
+                </p>
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- MOBILE OVERLAY -->
+
+    <div class="overlay" id="overlay"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
